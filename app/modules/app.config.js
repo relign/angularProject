@@ -4,25 +4,15 @@ require.config({
   paths:{
     app:'./app',
     angular:'../js/angular.1.4.7',
-    homeController:'./modules/homeController',
-
+    homeController:'./modules/homeController'
   },
   shim:{
-    angular : {
-      exports : 'angular',
-      deps:[
-
-      ]
-    },
-    homeController:{
-      exports:'homeController'
-    },
-    app:{
-      exports:'app'
+    angular:{
+      exports:'angular'
     }
   }
 });
 
 require(['angular','app','homeController'],function (angular) {
-  angular.bootstrap(document,["app"]);
+  angular.bootstrap(document,['app']);
 })
